@@ -1,5 +1,10 @@
 """
 Environment for policy-based machine learning agent
+for all gridworlds the start state is state 0
+and the terminal state is the last state.
+GridWorld_2D: 5x5
+GridWorld_3D: 5x5x5
+GridWorld_4D: 5x5x5x5
 """
 
 import numpy as np
@@ -160,6 +165,3 @@ class GridWorld_4D():
         if new_location == self.goal:
             return 200, self.location, True
         return -1, self.location, False
-
-if __name__ == "__main__":
-    A = GridWorld_1()
